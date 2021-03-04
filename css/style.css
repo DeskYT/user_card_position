@@ -7,25 +7,26 @@ body {
   padding-top: 100px;
   text-align: center;
 }
+/* 
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+} */
 
-.card-container {
+.card-wrapper {
   display: inline-block;
   position: relative;
-
   width: 300px;
   height: 200px;
-
+  padding: 25px 30px;
+  border-radius: 5px;
+  overflow: hidden;
   color: white;
   font-family: Calibri;
-  
-  border-radius: 5px;
-
-  padding: 25px 30px;
-  overflow: hidden;
   text-align: initial;
 }
 
-.card-container:nth-child(3n+2){
+.card-wrapper:nth-child(3n+2){
   background: rgb(140, 200, 245);
   background: linear-gradient(
     90deg,
@@ -34,7 +35,7 @@ body {
   );
 }
 
-.card-container:nth-child(3n+1){
+.card-wrapper:nth-child(3n+1){
   background: rgb(140, 200, 245);
   background: linear-gradient(
     90deg,
@@ -43,7 +44,7 @@ body {
   );
 }
 
-.card-container:nth-child(3n){
+.card-wrapper:nth-child(3n){
   background: rgb(140, 200, 245);
   background: linear-gradient(
     90deg,
@@ -52,11 +53,11 @@ body {
   );
 }
 
-.card-container + .card-container{
-  margin-left: 30px;
+.card-wrapper{
+  margin: 20px;
 }
 
-.card-container::before,.card-container::after{
+.card-wrapper::before,.card-wrapper::after{
   content: "";
   background-color: #eff8ff;
   width: 200px;
@@ -66,12 +67,12 @@ body {
   position: absolute;
 }
 
-.card-container::before {
-  
+.card-wrapper::before {
+
   top: -50px;
   right: -100px;
 }
-.card-container::after {
+.card-wrapper::after {
   bottom: -100px;
   right: -20px;
 }
