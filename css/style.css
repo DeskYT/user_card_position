@@ -1,52 +1,99 @@
-body{
-    background-color: #e3e3e3;
-    padding-top: 10%;
+*{
+  box-sizing: border-box;
 }
 
-body > * {
-    margin: 0 auto;
+body {
+  background-color: #e3e3e3;
+  padding-top: 100px;
+  text-align: center;
 }
-.cardContainer{
-    margin: 0 auto;
+
+.card-container {
+  display: inline-block;
+  position: relative;
+
+  width: 300px;
+  height: 200px;
+
+  color: white;
+  font-family: Calibri;
+  
+  border-radius: 5px;
+
+  padding: 25px 30px;
+  overflow: hidden;
+  text-align: initial;
 }
-.cardContainer{
-    width: 300px;
-    height: 200px;
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    background-color: #74b5ff;
-    border-radius: 3%;
-    overflow: hidden;
-    box-sizing: border-box;
+
+.card-container:nth-child(3n+2){
+  background: rgb(140, 200, 245);
+  background: linear-gradient(
+    90deg,
+    rgba(140, 200, 245, 1) 0%,
+    rgb(23, 101, 202) 100%
+  );
 }
-.infoText{
-    text-align: left;
-    margin-left: 15px;
-    padding: 15px;
+
+.card-container:nth-child(3n+1){
+  background: rgb(140, 200, 245);
+  background: linear-gradient(
+    90deg,
+    rgb(255,191,152) 0%,
+    rgb(255, 124, 174) 100%
+  );
 }
-.infoText > h1, h2, h3, h4, h5 {
-    color: white;
-    font-family: Calibri;
+
+.card-container:nth-child(3n){
+  background: rgb(140, 200, 245);
+  background: linear-gradient(
+    90deg,
+    rgb(129, 212, 205) 0%,
+    rgb(9,208,185) 100%
+  );
 }
-#circle1{
-     background-color: #eff8ff;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    opacity: 0.2;
-    position: absolute;
-    top:-50px;
-    right: -100px;
- }
-#circle2{
-    background-color: #eff8ff;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    opacity: 0.2;
-    position: absolute;
-    bottom: -100px;
-    right: -20px;
+
+.card-container + .card-container{
+  margin-left: 30px;
+}
+
+.card-container::before,.card-container::after{
+  content: "";
+  background-color: #eff8ff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  opacity: 0.2;
+  position: absolute;
+}
+
+.card-container::before {
+  
+  top: -50px;
+  right: -100px;
+}
+.card-container::after {
+  bottom: -100px;
+  right: -20px;
+}
+
+
+.heading{
+  display: inline-block;
+}
+
+
+.card-header{
+  display: flex;
+}
+.card-icon{
+  margin-left: auto;
+}
+
+.digit-stats{
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+.percentage-point{
+  margin-top: 2.5em;
 }

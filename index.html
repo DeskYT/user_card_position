@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>UserCard</title>
-</head>
-<body>
-    <div class="cardContainer">
-        <div class="infoText">
-            <h3>Weekly orders</h3>
-            <h1>45,6334</h1>
-            <h4>Decreased by 10%</h4>
-        </div>
-        <div id="circle1"></div>
-        <div id="circle2"></div>
-    </div>
-</body>
+  </head>
+  <body>
+    <section>
+      <article class="card-container">
+        <header class="card-header">
+          <h3 class="heading">Weekly Sales</h3>
+          <img class="card-icon" src="./icons/chart-line.svg" alt="chart-icon">
+        </header>
+       
+        <p class="digit-stats">$ 15,0000</p>
+        <p class="percentage-point">Increased by 60%</p>
+      </article>
+      <article class="card-container">
+        <header class="card-header">
+          <h3 class="heading">Weekly orders</h3>
+          <img class="card-icon" src="./icons/chart-line.svg" alt="chart-icon">
+        </header>
+          <p class="digit-stats">45,6334</p>
+          <p class="percentage-point">Decreased by 10%</p>
+        </article>
+      </div>
+      <article class="card-container">
+        <header class="card-header">
+          <h3 class="heading">Visitors Online</h3>
+          <img class="card-icon" src="./icons/chart-line.svg" alt="chart-icon">
+        </header>
+          <p class="digit-stats">95,5741</p>
+          <p class="percentage-point">Increased by 5%</p>
+        </article>
+      </div>
+    </section>
+  </body>
 </html>
